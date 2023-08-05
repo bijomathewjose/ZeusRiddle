@@ -5,4 +5,4 @@ load_dotenv()
 
 TOKEN = os.getenv('DISCORD_TOKEN')
 GUILD_ID=os.getenv('GUILD_ID')
-WELCOME_CHANNEL=os.getenv('GENERAL')
+WELCOME_CHANNEL=int(os.getenv('GENERAL'))
