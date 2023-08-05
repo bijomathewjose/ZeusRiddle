@@ -13,6 +13,7 @@ def run():
     async def on_ready():
         print(f"User: {bot.user.name} (ID: {bot.user.id})")
         await bot.load_extension('cogs.JoinParty')
+        await bot.load_extension('cogs.NewRoleChannel')
     bot.run(TOKEN)
 
 if __name__ == "__main__":
