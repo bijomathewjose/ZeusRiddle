@@ -11,18 +11,18 @@ class JoinParty(commands.Cog):
     async def on_member_join(self, member):
         try:
             role_name='Mortal'
+            role = discord.utils.get(member.guild.roles, name=role_name)
             sql=f"""SELECT * FROM user where user_id={member.id} """
             cursor.execute(sql)
             data=cursor.fetchall()
             if not data:
-                sql=f"""INSERT INTO user (user_id,name,role,id) VALUES('{member.id}','{(member.name)}','{role_name}','{uuid4()}')"""
+                sql=f"""INSERT INTO user (id,name) VALUES('{member.id}','{(member.name)}');INSERT INTO user_role_link (id,user_id,role_id) VALUES('{uuid4()},{member.id}','{role.id}')"""
                 cursor.execute(sql)
                 commit()
-            role = discord.utils.get(member.guild.roles, name=role_name)
             if role is not None:
                 await member.add_roles(role)
             else:
-                print('role is none ,user has no roles associated')
+                logger.error('New User has no roles associated')
             channel = self.bot.get_channel(WELCOME_CHANNEL)
             if channel:
                 logger.info(f'{member.id} {member.name} joined guild',member)
@@ -33,7 +33,7 @@ class JoinParty(commands.Cog):
     @commands.Cog.listener()
     async def on_member_remove(self, member):
         try:
-            sql=f"""DELETE FROM user where user_id='{member.id}'"""
+            sql=f"""DELETE FROM user_role_link where user_id='{member.id}'; DELETE FROM user where id='{member.id}'"""
             cursor.execute(sql)
             commit()
             channel = self.bot.get_channel(WELCOME_CHANNEL)
