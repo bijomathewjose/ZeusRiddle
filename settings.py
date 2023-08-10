@@ -1,6 +1,8 @@
 import os
-from dotenv import load_dotenv
 import discord
+import mysql.connector
+from dotenv import load_dotenv
+
 load_dotenv()
 
 TOKEN = os.getenv('DISCORD_TOKEN')
@@ -9,3 +11,12 @@ GUILD = discord.Object(id=int(os.getenv("GUILD_ID")))
 WELCOME_CHANNEL=int(os.getenv('GENERAL'))
 WEBHOOK_URL_1=os.getenv('WEBHOOK_URL_1')
 DB_PASS=os.getenv('DB_PASS')
+
+mydb = mysql.connector.connect(
+        host="localhost",
+        user="root",
+        password=DB_PASS,
+        database="zeus"
+    )
+cursor = mydb.cursor(dictionary=True)
+commit = mydb.commit
