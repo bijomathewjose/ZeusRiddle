@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
-from settings import TOKEN,GUILD,GUILD_ID,cursor,commit
+from settings import TOKEN,GUILD,GUILD_ID,cursor,commit,logging
+logger = logging.getLogger("bot")
+
 
 def run():
     try:
@@ -12,14 +14,14 @@ def run():
 
         @bot.event
         async def on_ready():   
-            print(f"User: {bot.user.name} (ID: {bot.user.id})")
+            logger.info(f"User: {bot.user} (ID: {bot.user.id})")
             await bot.load_extension('cogs.JoinParty')
             await bot.load_extension('cogs.NewRoleChannel')
             await bot.load_extension('slashcmds.sync')
             bot.tree.copy_global_to(guild=GUILD)
             await bot.tree.sync(guild=GUILD)
             
-        bot.run(TOKEN)
+        bot.run(TOKEN,root_logger=True)
     except Exception as e:
         print(e)
 
