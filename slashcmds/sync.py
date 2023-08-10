@@ -22,11 +22,18 @@ class Sync(app_commands.Group):
             db_user_role_links=cursor.fetchall()
             users=guild.members
             for db_user_role in db_user_role_links:
+                user_in_discord=False
                 for user in users:
                     if db_user_role['user_id']==str(user.id):
+                        user_in_discord=True
                         if not any(db_user_role['role_id']==str(role.id) for role in user.roles):
-                            role=discord.utils.get(guild.roles,id=int(db_user_role['role_id']))
+                            role=discord.utils.get(guild
+                            .roles,id=int(db_user_role['role_id']))
                             await user.add_roles(role)
+                if not user_in_discord:
+                    sql=f"""DELETE FROM user_role_link WHERE user_id='{db_user_role['user_id']}'"""
+                    cursor.execute(sql)
+                    commit()
             await interaction.response.send_message(f"Updated roles in db for {guild.name}",ephemeral=True)
             pass
         except Exception as e:
@@ -71,6 +78,7 @@ class Sync(app_commands.Group):
                     if not (self.check_user(db_members,member,role) or role.name=='@everyone'):
                         cursor.execute(sql) 
                         commit()
+
         except Exception as  e:
             logger.error(f'Exception - {e}',e)
 async def setup(bot):
