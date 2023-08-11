@@ -1,6 +1,7 @@
 import discord
+import logging
 from discord.ext import commands
-from settings import TOKEN,GUILD,GUILD_ID,cursor,commit,logging
+from settings import TOKEN,GUILD
 logger = logging.getLogger("bot")
 
 
@@ -9,6 +10,7 @@ def run():
         intents=discord.Intents.default()
         intents.members=True
         intents.message_content=True
+        intents.guilds=True
 
         bot = commands.Bot(command_prefix='!', intents=intents)
 

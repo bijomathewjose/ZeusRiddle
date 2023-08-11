@@ -1,2 +1,500 @@
-INFO       - 2023-08-10 20:53:23,067 - client          : logging in using static token
-INFO       - 2023-08-10 20:53:24,837 - gateway         : Shard ID None has connected to Gateway (Session ID: 62dc91c97f88d7a51e92c8f28896d83f).
+INFO       - 2023-08-11 09:59:27,971 - client          : logging in using static token
+INFO       - 2023-08-11 11:20:36,805 - client          : logging in using static token
+INFO       - 2023-08-11 11:20:38,687 - gateway         : Shard ID None has connected to Gateway (Session ID: 395eefbe5e08e388066d2c40a5ef86ad).
+ERROR      - 2023-08-11 11:20:41,009 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 935, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\cogs\JoinParty.py", line 2, in <module>
+    from settings import WELCOME_CHANNEL,logging
+ImportError: cannot import name 'logging' from 'settings' (C:\Users\bijom\Documents\GitHub\ZeusRiddle\settings.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\main.py", line 19, in on_ready
+    await bot.load_extension('cogs.JoinParty')
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 1013, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 938, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.JoinParty' raised an error: ImportError: cannot import name 'logging' from 'settings' (C:\Users\bijom\Documents\GitHub\ZeusRiddle\settings.py)
+INFO       - 2023-08-11 11:21:38,670 - client          : logging in using static token
+INFO       - 2023-08-11 11:21:40,323 - gateway         : Shard ID None has connected to Gateway (Session ID: 0fbd6f6751d3904b772365cfce5dc518).
+INFO       - 2023-08-11 11:23:59,739 - client          : logging in using static token
+INFO       - 2023-08-11 11:24:01,832 - gateway         : Shard ID None has connected to Gateway (Session ID: f8ef8a3232076fbf1f50864f5c1c345b).
+INFO       - 2023-08-11 11:25:05,167 - client          : logging in using static token
+INFO       - 2023-08-11 11:25:06,977 - gateway         : Shard ID None has connected to Gateway (Session ID: 6b1907b3eb4e03222bd53b56ba811e9e).
+INFO       - 2023-08-11 11:25:40,548 - client          : logging in using static token
+INFO       - 2023-08-11 11:25:42,187 - gateway         : Shard ID None has connected to Gateway (Session ID: a7d27193aa0c84965db05d79411638d9).
+INFO       - 2023-08-11 11:26:15,123 - client          : logging in using static token
+INFO       - 2023-08-11 11:26:16,868 - gateway         : Shard ID None has connected to Gateway (Session ID: 5dd4fc8c2999bb9a9a9b6221aa421470).
+INFO       - 2023-08-11 11:29:15,507 - client          : logging in using static token
+INFO       - 2023-08-11 11:29:17,181 - gateway         : Shard ID None has connected to Gateway (Session ID: b4a477448a4af4e7537125fdb300d9d7).
+INFO       - 2023-08-11 11:31:32,935 - client          : logging in using static token
+INFO       - 2023-08-11 11:31:34,654 - gateway         : Shard ID None has connected to Gateway (Session ID: cc754c35ec4c8a8fd3fa17a5c7c3fc29).
+INFO       - 2023-08-11 11:32:06,148 - client          : logging in using static token
+INFO       - 2023-08-11 11:32:07,862 - gateway         : Shard ID None has connected to Gateway (Session ID: 709400aae593989d2a6828f65cf2f8b5).
+INFO       - 2023-08-11 11:33:01,440 - client          : logging in using static token
+INFO       - 2023-08-11 11:33:03,082 - gateway         : Shard ID None has connected to Gateway (Session ID: 28d8b72a39b63a794ccb7a722d5f95f3).
+INFO       - 2023-08-11 11:34:07,136 - client          : logging in using static token
+INFO       - 2023-08-11 11:34:08,889 - gateway         : Shard ID None has connected to Gateway (Session ID: 2e5206651b348596060e2c27b158e336).
+INFO       - 2023-08-11 11:35:15,702 - client          : logging in using static token
+INFO       - 2023-08-11 11:35:17,547 - gateway         : Shard ID None has connected to Gateway (Session ID: 1afcf7736760934a154a3ebe1c5e4e24).
+INFO       - 2023-08-11 11:35:51,560 - client          : logging in using static token
+INFO       - 2023-08-11 11:35:53,349 - gateway         : Shard ID None has connected to Gateway (Session ID: efe8a380516abdd63e4bdb7c020a6072).
+INFO       - 2023-08-11 11:37:56,216 - client          : logging in using static token
+INFO       - 2023-08-11 11:37:57,941 - gateway         : Shard ID None has connected to Gateway (Session ID: 23d9df2687468c9cb82a83c693960d89).
+INFO       - 2023-08-11 11:38:12,907 - client          : logging in using static token
+INFO       - 2023-08-11 11:38:14,519 - gateway         : Shard ID None has connected to Gateway (Session ID: 94e6776f34704a69fb9f59e47a3bb952).
+INFO       - 2023-08-11 11:39:05,016 - client          : logging in using static token
+INFO       - 2023-08-11 11:39:06,753 - gateway         : Shard ID None has connected to Gateway (Session ID: 0061b1e5db3f39207605379c587319d5).
+INFO       - 2023-08-11 11:42:20,145 - client          : logging in using static token
+INFO       - 2023-08-11 11:42:21,850 - gateway         : Shard ID None has connected to Gateway (Session ID: 7c4cac72dfb8b0db6a02c02ec82bfbb5).
+INFO       - 2023-08-11 11:44:03,478 - client          : logging in using static token
+INFO       - 2023-08-11 11:44:05,163 - gateway         : Shard ID None has connected to Gateway (Session ID: 577885d4e3d0e8b27e21d41eb44a373e).
+INFO       - 2023-08-11 11:44:27,566 - client          : logging in using static token
+INFO       - 2023-08-11 11:44:29,190 - gateway         : Shard ID None has connected to Gateway (Session ID: 1934135487b0eb712ea7d0368fdeb7aa).
+INFO       - 2023-08-11 11:45:49,073 - client          : logging in using static token
+INFO       - 2023-08-11 11:45:50,681 - gateway         : Shard ID None has connected to Gateway (Session ID: 707c056bb5b21833ddb0e7d2bcaea262).
+INFO       - 2023-08-11 11:47:07,888 - client          : logging in using static token
+INFO       - 2023-08-11 11:47:09,555 - gateway         : Shard ID None has connected to Gateway (Session ID: 3b38e62c90629a2f971ef6def0e70acd).
+INFO       - 2023-08-11 11:47:38,588 - client          : logging in using static token
+INFO       - 2023-08-11 11:47:41,103 - gateway         : Shard ID None has connected to Gateway (Session ID: 26d0b4b93fb63e2fa02aabff22230a10).
+INFO       - 2023-08-11 11:47:59,345 - client          : logging in using static token
+INFO       - 2023-08-11 11:48:01,087 - gateway         : Shard ID None has connected to Gateway (Session ID: 643353a0823e50c4ff09f44395118456).
+INFO       - 2023-08-11 11:49:51,773 - client          : logging in using static token
+INFO       - 2023-08-11 11:49:53,568 - gateway         : Shard ID None has connected to Gateway (Session ID: f5cff2281e7eac30c6a42c0629c79213).
+INFO       - 2023-08-11 11:50:18,417 - client          : logging in using static token
+INFO       - 2023-08-11 11:50:20,015 - gateway         : Shard ID None has connected to Gateway (Session ID: 89fed9b8ed58fa863459fa9de3e18bfe).
+INFO       - 2023-08-11 12:00:10,039 - client          : logging in using static token
+INFO       - 2023-08-11 12:00:11,857 - gateway         : Shard ID None has connected to Gateway (Session ID: b9a37e1c2cfccf13dee9c5357e919a94).
+INFO       - 2023-08-11 12:00:42,163 - client          : logging in using static token
+INFO       - 2023-08-11 12:00:43,865 - gateway         : Shard ID None has connected to Gateway (Session ID: 02eb01699ee05b884466c97105167db9).
+INFO       - 2023-08-11 12:01:39,339 - client          : logging in using static token
+INFO       - 2023-08-11 12:01:41,000 - gateway         : Shard ID None has connected to Gateway (Session ID: 7740ca9bbe4a49bae12114e5fc339dd3).
+INFO       - 2023-08-11 12:18:16,582 - client          : logging in using static token
+INFO       - 2023-08-11 12:18:18,196 - gateway         : Shard ID None has connected to Gateway (Session ID: 04dedbf409dfb81a1e2404bea36b6feb).
+INFO       - 2023-08-11 12:19:28,962 - client          : logging in using static token
+INFO       - 2023-08-11 12:19:30,558 - gateway         : Shard ID None has connected to Gateway (Session ID: e20350ecda5155183ca79068255d8f4c).
+INFO       - 2023-08-11 12:21:03,274 - client          : logging in using static token
+INFO       - 2023-08-11 12:21:04,985 - gateway         : Shard ID None has connected to Gateway (Session ID: 6baefa8d1046d591ade74030f95f1d52).
+INFO       - 2023-08-11 12:39:30,213 - client          : logging in using static token
+INFO       - 2023-08-11 12:39:31,957 - gateway         : Shard ID None has connected to Gateway (Session ID: db336f8f7732a21045c651981f8fc396).
+INFO       - 2023-08-11 12:40:28,107 - client          : logging in using static token
+INFO       - 2023-08-11 12:40:29,880 - gateway         : Shard ID None has connected to Gateway (Session ID: a415715ad891635a0b7981c1423265a2).
+INFO       - 2023-08-11 12:42:29,402 - client          : logging in using static token
+INFO       - 2023-08-11 12:42:31,115 - gateway         : Shard ID None has connected to Gateway (Session ID: fab33f3e015f79810cf0edef04ff8fb1).
+INFO       - 2023-08-11 12:43:32,413 - client          : logging in using static token
+INFO       - 2023-08-11 12:43:34,080 - gateway         : Shard ID None has connected to Gateway (Session ID: 7dd192e25f345dfe7d33fb00ac260fd0).
+INFO       - 2023-08-11 12:45:17,856 - client          : logging in using static token
+INFO       - 2023-08-11 12:45:19,689 - gateway         : Shard ID None has connected to Gateway (Session ID: fd6426cd9c68c77b884bfc8c1806315f).
+INFO       - 2023-08-11 12:45:36,600 - client          : logging in using static token
+INFO       - 2023-08-11 12:45:38,246 - gateway         : Shard ID None has connected to Gateway (Session ID: ac3fdd2cbcb941d47e17e9927061333a).
+INFO       - 2023-08-11 12:46:15,368 - client          : logging in using static token
+INFO       - 2023-08-11 12:46:17,166 - gateway         : Shard ID None has connected to Gateway (Session ID: caac7c008d7e8381a686e4e161683631).
+INFO       - 2023-08-11 12:46:57,169 - client          : logging in using static token
+INFO       - 2023-08-11 12:46:58,871 - gateway         : Shard ID None has connected to Gateway (Session ID: 1acd9eb36e44c95fa9827d0e23a54f05).
+INFO       - 2023-08-11 12:50:40,145 - client          : logging in using static token
+INFO       - 2023-08-11 12:50:41,885 - gateway         : Shard ID None has connected to Gateway (Session ID: f9682f116fded738ee1dadcb2a2242df).
+ERROR      - 2023-08-11 12:50:43,914 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 935, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\cogs\NewRoleChannel.py", line 5, in <module>
+    from utils.NewRoleChannelUtil import get_fields_from_embed,checkChannel,add_new_role,send_result
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\utils\NewRoleChannelUtil.py", line 36
+    embed = discord.Embed(title="Success" rich=True)
+                                ^^^^^^^^^^^^^^
+SyntaxError: invalid syntax. Perhaps you forgot a comma?
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\main.py", line 20, in on_ready
+    await bot.load_extension('cogs.NewRoleChannel')
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 1013, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 938, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.NewRoleChannel' raised an error: SyntaxError: invalid syntax. Perhaps you forgot a comma? (NewRoleChannelUtil.py, line 36)
+INFO       - 2023-08-11 12:51:03,504 - client          : logging in using static token
+INFO       - 2023-08-11 12:51:05,335 - gateway         : Shard ID None has connected to Gateway (Session ID: 13fe24a2886035c889c1ac8b5f1f858d).
+INFO       - 2023-08-11 12:54:56,097 - client          : logging in using static token
+INFO       - 2023-08-11 12:54:57,870 - gateway         : Shard ID None has connected to Gateway (Session ID: 1cd3e9101f110c97d6cb74d6329f249e).
+INFO       - 2023-08-11 12:56:05,346 - client          : logging in using static token
+INFO       - 2023-08-11 12:56:06,948 - gateway         : Shard ID None has connected to Gateway (Session ID: 552a8ae79aa8595eb7a424e91f37bc7d).
+INFO       - 2023-08-11 12:56:50,160 - client          : logging in using static token
+INFO       - 2023-08-11 12:56:51,871 - gateway         : Shard ID None has connected to Gateway (Session ID: 10cdeab9d9f4192cf19d43a370e45521).
+INFO       - 2023-08-11 12:58:13,705 - client          : logging in using static token
+INFO       - 2023-08-11 12:58:15,269 - gateway         : Shard ID None has connected to Gateway (Session ID: 60aedd3f84f0147b15996f2b16347a3d).
+INFO       - 2023-08-11 12:58:53,812 - client          : logging in using static token
+INFO       - 2023-08-11 12:58:55,489 - gateway         : Shard ID None has connected to Gateway (Session ID: 7db8dd05e6b53eefe467daeb08276f0b).
+INFO       - 2023-08-11 13:02:25,908 - client          : logging in using static token
+INFO       - 2023-08-11 13:02:27,430 - gateway         : Shard ID None has connected to Gateway (Session ID: f54bc8f1a72a2dc5628843b97002f1ca).
+INFO       - 2023-08-11 13:10:38,133 - client          : logging in using static token
+INFO       - 2023-08-11 13:10:39,826 - gateway         : Shard ID None has connected to Gateway (Session ID: eb25843e6502d32e3ad0017a4c272d2a).
+INFO       - 2023-08-11 13:12:59,640 - client          : logging in using static token
+INFO       - 2023-08-11 13:13:01,264 - gateway         : Shard ID None has connected to Gateway (Session ID: 11b0346cb104b0c221600072d7697c29).
+INFO       - 2023-08-11 13:17:28,536 - client          : logging in using static token
+INFO       - 2023-08-11 13:17:30,197 - gateway         : Shard ID None has connected to Gateway (Session ID: 1042224b214d38f55042a24295bf7a05).
+INFO       - 2023-08-11 13:19:11,720 - client          : logging in using static token
+INFO       - 2023-08-11 13:19:13,423 - gateway         : Shard ID None has connected to Gateway (Session ID: fd9f9356cf60f1030aa07f6e718c37f1).
+INFO       - 2023-08-11 13:21:20,562 - client          : logging in using static token
+INFO       - 2023-08-11 13:21:22,162 - gateway         : Shard ID None has connected to Gateway (Session ID: e273c634eb4fe6022088a676e72b02dc).
+INFO       - 2023-08-11 13:26:51,332 - client          : logging in using static token
+INFO       - 2023-08-11 13:26:53,091 - gateway         : Shard ID None has connected to Gateway (Session ID: 3255270e76c13065da1e76d802665a06).
+ERROR      - 2023-08-11 13:27:02,554 - client          : Ignoring exception in on_guild_role_update
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+TypeError: JoinParty.on_guild_role_update() takes 2 positional arguments but 3 were given
+INFO       - 2023-08-11 13:27:36,743 - client          : logging in using static token
+INFO       - 2023-08-11 13:27:38,394 - gateway         : Shard ID None has connected to Gateway (Session ID: 8b864401e752e4f355f908f1da041693).
+ERROR      - 2023-08-11 13:27:51,583 - client          : Ignoring exception in on_guild_role_update
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+TypeError: JoinParty.on_guild_role_update() takes 2 positional arguments but 3 were given
+ERROR      - 2023-08-11 13:28:54,474 - client          : Ignoring exception in on_guild_role_update
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^
+TypeError: JoinParty.on_guild_role_update() takes 2 positional arguments but 3 were given
+INFO       - 2023-08-11 13:29:58,199 - client          : logging in using static token
+INFO       - 2023-08-11 13:29:59,896 - gateway         : Shard ID None has connected to Gateway (Session ID: eb8a2d885c002bc78734b0157165d7ac).
+INFO       - 2023-08-11 13:31:05,774 - client          : logging in using static token
+INFO       - 2023-08-11 13:31:07,439 - gateway         : Shard ID None has connected to Gateway (Session ID: 7e66ec39cc18ab5b279cd79a7b334bfd).
+INFO       - 2023-08-11 13:32:32,116 - client          : logging in using static token
+INFO       - 2023-08-11 13:32:34,304 - gateway         : Shard ID None has connected to Gateway (Session ID: e3b35a8103ba72e96c80d8646ebe6807).
+INFO       - 2023-08-11 13:32:56,299 - client          : logging in using static token
+INFO       - 2023-08-11 13:32:57,867 - gateway         : Shard ID None has connected to Gateway (Session ID: 1cd27c204b381ce9dc1f5b4b895c426c).
+INFO       - 2023-08-11 13:33:50,699 - client          : logging in using static token
+INFO       - 2023-08-11 13:33:52,408 - gateway         : Shard ID None has connected to Gateway (Session ID: f4d221e45ab8d3408cd1d8b02c0554ec).
+INFO       - 2023-08-11 13:34:33,903 - client          : logging in using static token
+INFO       - 2023-08-11 13:34:35,519 - gateway         : Shard ID None has connected to Gateway (Session ID: 67bc1c37a1298375ea93869515699587).
+INFO       - 2023-08-11 13:36:59,034 - client          : logging in using static token
+INFO       - 2023-08-11 13:37:00,701 - gateway         : Shard ID None has connected to Gateway (Session ID: 22fa5bd2920183856bf97481a249ca53).
+INFO       - 2023-08-11 13:37:47,846 - client          : logging in using static token
+INFO       - 2023-08-11 13:37:49,681 - gateway         : Shard ID None has connected to Gateway (Session ID: cfe8adfc295bc0892b26a971ef5b62cb).
+INFO       - 2023-08-11 13:38:23,855 - client          : logging in using static token
+INFO       - 2023-08-11 13:38:25,531 - gateway         : Shard ID None has connected to Gateway (Session ID: d05712782ec886236515d4740bc9ecd9).
+INFO       - 2023-08-11 13:39:59,856 - client          : logging in using static token
+INFO       - 2023-08-11 13:40:01,587 - gateway         : Shard ID None has connected to Gateway (Session ID: 0f43fddf19ee3920deab35170f658f04).
+INFO       - 2023-08-11 13:41:14,433 - client          : logging in using static token
+INFO       - 2023-08-11 13:41:16,189 - gateway         : Shard ID None has connected to Gateway (Session ID: 0429bb4512f7e4980e2ad15e076c9686).
+INFO       - 2023-08-11 13:41:31,393 - client          : logging in using static token
+INFO       - 2023-08-11 13:41:32,958 - gateway         : Shard ID None has connected to Gateway (Session ID: 568425801503fd7bee94e76a7b9d264d).
+INFO       - 2023-08-11 13:43:14,897 - client          : logging in using static token
+INFO       - 2023-08-11 13:43:16,545 - gateway         : Shard ID None has connected to Gateway (Session ID: db79a0b7303f89c0b3a12ca636dae172).
+INFO       - 2023-08-11 13:44:12,348 - client          : logging in using static token
+INFO       - 2023-08-11 13:44:13,994 - gateway         : Shard ID None has connected to Gateway (Session ID: 2e70e2cc53acf59c81ec298d95ec38c6).
+INFO       - 2023-08-11 13:56:21,135 - client          : logging in using static token
+INFO       - 2023-08-11 13:56:22,798 - gateway         : Shard ID None has connected to Gateway (Session ID: eb218070c1b97accb617e50442c5f400).
+INFO       - 2023-08-11 14:01:27,025 - client          : logging in using static token
+INFO       - 2023-08-11 14:01:28,661 - gateway         : Shard ID None has connected to Gateway (Session ID: 20c6c361d46b0c17c1ca43b70d7b2e1c).
+INFO       - 2023-08-11 14:02:20,142 - client          : logging in using static token
+INFO       - 2023-08-11 14:02:23,079 - client          : logging in using static token
+INFO       - 2023-08-11 14:02:24,712 - gateway         : Shard ID None has connected to Gateway (Session ID: 78a5f5816c13d3f993421d0a8b339af7).
+INFO       - 2023-08-11 14:05:40,232 - client          : logging in using static token
+INFO       - 2023-08-11 14:05:41,896 - gateway         : Shard ID None has connected to Gateway (Session ID: 13a306d4ae20e5a738bcdc5aff6b2b1a).
+INFO       - 2023-08-11 14:05:54,934 - client          : logging in using static token
+INFO       - 2023-08-11 14:05:56,677 - gateway         : Shard ID None has connected to Gateway (Session ID: ab1284b46a13090688c7625a757b67ad).
+INFO       - 2023-08-11 14:06:19,150 - client          : logging in using static token
+INFO       - 2023-08-11 14:06:20,742 - gateway         : Shard ID None has connected to Gateway (Session ID: d091e6d518d52f954dc8e3b3173a9364).
+INFO       - 2023-08-11 14:06:40,134 - client          : logging in using static token
+INFO       - 2023-08-11 14:06:41,685 - gateway         : Shard ID None has connected to Gateway (Session ID: b3131f671a41cf67b1287d108cb85c38).
+WARNING    - 2023-08-11 14:06:44,088 - http            : We are being rate limited. PUT https://discord.com/api/v10/applications/1136271015769555006/guilds/1136270059820568677/commands responded with 429. Retrying in 0.30 seconds.
+INFO       - 2023-08-11 14:10:30,001 - client          : logging in using static token
+INFO       - 2023-08-11 14:10:31,644 - gateway         : Shard ID None has connected to Gateway (Session ID: d2a040a9350c32410f7717258926f773).
+INFO       - 2023-08-11 14:12:18,806 - client          : logging in using static token
+INFO       - 2023-08-11 14:12:20,397 - gateway         : Shard ID None has connected to Gateway (Session ID: 07d544735fb18f2c0c2dcab17fb7f820).
+INFO       - 2023-08-11 14:13:00,091 - client          : logging in using static token
+INFO       - 2023-08-11 14:13:01,737 - gateway         : Shard ID None has connected to Gateway (Session ID: 3d5f89aca190068e10336a345e019aaa).
+INFO       - 2023-08-11 14:13:21,585 - client          : logging in using static token
+INFO       - 2023-08-11 14:13:23,226 - gateway         : Shard ID None has connected to Gateway (Session ID: d6c5a1dd23329eb361a67db0d94fec16).
+INFO       - 2023-08-11 14:14:15,993 - client          : logging in using static token
+INFO       - 2023-08-11 14:14:17,676 - gateway         : Shard ID None has connected to Gateway (Session ID: 70eaf48c94a6172f0f6e4edfe50cbc2b).
+INFO       - 2023-08-11 14:16:28,716 - client          : logging in using static token
+INFO       - 2023-08-11 14:16:30,368 - gateway         : Shard ID None has connected to Gateway (Session ID: e9de4a79a6489c2b52e4e171bfba73d3).
+INFO       - 2023-08-11 14:17:39,321 - client          : logging in using static token
+INFO       - 2023-08-11 14:17:40,901 - gateway         : Shard ID None has connected to Gateway (Session ID: e77ceda5feaf03fbc63bcc07d452a1c7).
+INFO       - 2023-08-11 14:18:06,709 - client          : logging in using static token
+INFO       - 2023-08-11 14:18:08,338 - gateway         : Shard ID None has connected to Gateway (Session ID: b525a5510c21f9042495c03519844e07).
+INFO       - 2023-08-11 14:19:17,092 - client          : logging in using static token
+INFO       - 2023-08-11 14:19:18,724 - gateway         : Shard ID None has connected to Gateway (Session ID: 3e189f9561e12900df2d521fdfc15942).
+INFO       - 2023-08-11 14:21:49,421 - client          : logging in using static token
+INFO       - 2023-08-11 14:21:50,998 - gateway         : Shard ID None has connected to Gateway (Session ID: fce28f22bece94467a9754f83984b757).
+INFO       - 2023-08-11 14:23:02,028 - client          : logging in using static token
+INFO       - 2023-08-11 14:23:03,764 - gateway         : Shard ID None has connected to Gateway (Session ID: 340593963cd5e6e87a2eee94c64bad00).
+INFO       - 2023-08-11 14:25:20,226 - client          : logging in using static token
+INFO       - 2023-08-11 14:25:22,075 - gateway         : Shard ID None has connected to Gateway (Session ID: 90350c5bb52782f229b8f253ef17124b).
+INFO       - 2023-08-11 15:00:57,557 - gateway         : Shard ID None session has been invalidated.
+INFO       - 2023-08-11 15:01:03,878 - gateway         : Shard ID None has connected to Gateway (Session ID: 121d37268b56fe0e2c387b4580744407).
+ERROR      - 2023-08-11 15:01:05,952 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\main.py", line 20, in on_ready
+    await bot.load_extension('cogs.JoinParty')
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 1007, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'cogs.JoinParty' is already loaded.
+INFO       - 2023-08-11 15:01:43,534 - client          : logging in using static token
+INFO       - 2023-08-11 15:01:45,239 - gateway         : Shard ID None has connected to Gateway (Session ID: 7c0d54983940220c157c44d1ee6e64c3).
+INFO       - 2023-08-11 15:03:27,145 - client          : logging in using static token
+INFO       - 2023-08-11 15:03:28,827 - gateway         : Shard ID None has connected to Gateway (Session ID: 9f930bbcf1121be736a2b68fb8792b18).
+INFO       - 2023-08-11 15:05:47,843 - client          : logging in using static token
+INFO       - 2023-08-11 15:05:49,622 - gateway         : Shard ID None has connected to Gateway (Session ID: c33f5814b915f90c0d7d11feaa3bb6ba).
+INFO       - 2023-08-11 15:12:42,420 - client          : logging in using static token
+INFO       - 2023-08-11 15:12:44,229 - gateway         : Shard ID None has connected to Gateway (Session ID: 78020a3967b026b5b7c4279b3279b528).
+INFO       - 2023-08-11 15:13:40,872 - client          : logging in using static token
+INFO       - 2023-08-11 15:13:42,440 - gateway         : Shard ID None has connected to Gateway (Session ID: 540ee575e0292b64206b840c11cd4832).
+INFO       - 2023-08-11 15:16:22,906 - client          : logging in using static token
+INFO       - 2023-08-11 15:16:24,562 - gateway         : Shard ID None has connected to Gateway (Session ID: 550a776fa745758ffac7db43c0c8c9c6).
+INFO       - 2023-08-11 15:17:53,529 - client          : logging in using static token
+INFO       - 2023-08-11 15:17:55,292 - gateway         : Shard ID None has connected to Gateway (Session ID: a27542bfdf991ca75b4de3414db76c97).
+INFO       - 2023-08-11 15:20:10,981 - client          : logging in using static token
+INFO       - 2023-08-11 15:20:12,683 - gateway         : Shard ID None has connected to Gateway (Session ID: 0f038f3224283d01495fcc62788132a3).
+INFO       - 2023-08-11 15:21:56,820 - client          : logging in using static token
+INFO       - 2023-08-11 15:21:58,509 - gateway         : Shard ID None has connected to Gateway (Session ID: fa790258aceb17e48f937deb1c5669ca).
+INFO       - 2023-08-11 15:25:51,965 - client          : logging in using static token
+INFO       - 2023-08-11 15:25:53,908 - gateway         : Shard ID None has connected to Gateway (Session ID: e1cb971b6d55560db33a20c039ec82a9).
+INFO       - 2023-08-11 15:26:39,674 - client          : logging in using static token
+INFO       - 2023-08-11 15:26:41,464 - gateway         : Shard ID None has connected to Gateway (Session ID: 9c168fd87d57769fd024604652cc2bbc).
+INFO       - 2023-08-11 15:31:09,730 - client          : logging in using static token
+INFO       - 2023-08-11 15:31:11,535 - gateway         : Shard ID None has connected to Gateway (Session ID: 8617c4aa811c0d3e3828f6dabe70e653).
+INFO       - 2023-08-11 15:48:32,924 - client          : logging in using static token
+INFO       - 2023-08-11 15:48:34,619 - gateway         : Shard ID None has connected to Gateway (Session ID: c8307da54cae7c588aeb3e4176d35349).
+INFO       - 2023-08-11 15:50:29,929 - client          : logging in using static token
+INFO       - 2023-08-11 15:50:31,651 - gateway         : Shard ID None has connected to Gateway (Session ID: 1a947b3469573e73ffe9e0e3d610eb3f).
+INFO       - 2023-08-11 15:52:02,603 - client          : logging in using static token
+INFO       - 2023-08-11 15:52:04,287 - gateway         : Shard ID None has connected to Gateway (Session ID: afdd0a47df20eb67d4f85e55d7e2d8f8).
+INFO       - 2023-08-11 15:52:52,973 - client          : logging in using static token
+INFO       - 2023-08-11 15:52:54,644 - gateway         : Shard ID None has connected to Gateway (Session ID: 16ec30231e535462c403feff9506db39).
+INFO       - 2023-08-11 15:54:27,277 - client          : logging in using static token
+INFO       - 2023-08-11 15:54:28,917 - gateway         : Shard ID None has connected to Gateway (Session ID: bda53b555a63e039c38a141b432e2eb5).
+INFO       - 2023-08-11 15:55:10,301 - client          : logging in using static token
+INFO       - 2023-08-11 15:55:11,935 - gateway         : Shard ID None has connected to Gateway (Session ID: 3f8f9e758b8a24f664bf37d9f80ab76e).
+INFO       - 2023-08-11 15:55:45,750 - gateway         : Shard ID None has successfully RESUMED session 8617c4aa811c0d3e3828f6dabe70e653.
+INFO       - 2023-08-11 15:57:03,200 - client          : logging in using static token
+INFO       - 2023-08-11 15:57:04,993 - gateway         : Shard ID None has connected to Gateway (Session ID: 00188e3693f95ac1fcfcfbc7a30def41).
+ERROR      - 2023-08-11 15:57:12,151 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+ERROR      - 2023-08-11 15:57:24,549 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+ERROR      - 2023-08-11 16:01:37,776 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:02:15,051 - client          : logging in using static token
+INFO       - 2023-08-11 16:02:16,735 - gateway         : Shard ID None has connected to Gateway (Session ID: 4dcff8a1809d7b4b18d4826342077ad1).
+ERROR      - 2023-08-11 16:02:21,603 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:02:58,617 - client          : logging in using static token
+INFO       - 2023-08-11 16:03:00,409 - gateway         : Shard ID None has connected to Gateway (Session ID: f7759194614407b5d2e19f9401121bb6).
+ERROR      - 2023-08-11 16:03:03,759 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:03:18,558 - client          : logging in using static token
+INFO       - 2023-08-11 16:03:20,259 - gateway         : Shard ID None has connected to Gateway (Session ID: aea299f7963707e46d8b3ddbc2741b73).
+INFO       - 2023-08-11 16:03:22,292 - gateway         : Shard ID None has successfully RESUMED session 8617c4aa811c0d3e3828f6dabe70e653.
+ERROR      - 2023-08-11 16:03:23,989 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:04:15,694 - client          : logging in using static token
+INFO       - 2023-08-11 16:04:17,326 - gateway         : Shard ID None has connected to Gateway (Session ID: cbace05baee2ceffadb05f4de81aabff).
+ERROR      - 2023-08-11 16:04:23,154 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:04:43,020 - client          : logging in using static token
+INFO       - 2023-08-11 16:04:44,672 - gateway         : Shard ID None has connected to Gateway (Session ID: c39c4a0de37035f58abf3b7e37fe05c4).
+ERROR      - 2023-08-11 16:04:47,936 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+ERROR      - 2023-08-11 16:06:26,709 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+ERROR      - 2023-08-11 16:06:37,917 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:09:01,827 - client          : logging in using static token
+INFO       - 2023-08-11 16:09:03,570 - gateway         : Shard ID None has connected to Gateway (Session ID: 16588a4606e66e0e10de062b097c700b).
+ERROR      - 2023-08-11 16:09:32,815 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:10:11,436 - client          : logging in using static token
+INFO       - 2023-08-11 16:10:13,193 - gateway         : Shard ID None has connected to Gateway (Session ID: 47529642540ddd6c8fc20cfe5df870fc).
+ERROR      - 2023-08-11 16:10:18,952 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+ERROR      - 2023-08-11 16:10:30,693 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:11:21,452 - client          : logging in using static token
+INFO       - 2023-08-11 16:11:23,206 - gateway         : Shard ID None has connected to Gateway (Session ID: 921a220f9b4cfcf177b11f9b3b7a2207).
+ERROR      - 2023-08-11 16:11:26,947 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:11:58,959 - client          : logging in using static token
+INFO       - 2023-08-11 16:12:02,056 - gateway         : Shard ID None has connected to Gateway (Session ID: f88abdcaf0aef1a70013d627f2c3f229).
+ERROR      - 2023-08-11 16:12:05,494 - tree            : Ignoring exception in command tree
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1089, in wrapper
+    await self._call(interaction)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1221, in _call
+    command, options = self._get_app_command_options(data)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\app_commands\tree.py", line 1140, in _get_app_command_options
+    raise CommandNotFound(name, parents)
+discord.app_commands.errors.CommandNotFound: Application command 'db' not found
+INFO       - 2023-08-11 16:14:14,804 - client          : logging in using static token
+INFO       - 2023-08-11 16:14:16,529 - gateway         : Shard ID None has connected to Gateway (Session ID: 8624345222ad42965377882201ae419f).
+INFO       - 2023-08-11 16:24:20,853 - client          : logging in using static token
+INFO       - 2023-08-11 16:24:22,610 - gateway         : Shard ID None has connected to Gateway (Session ID: 3a0eb6b35fbd789750c186f1b01282a1).
+INFO       - 2023-08-11 16:28:38,700 - client          : logging in using static token
+INFO       - 2023-08-11 16:28:41,137 - gateway         : Shard ID None has connected to Gateway (Session ID: 328015142ce6d6a5f5bd658b3c81b6ee).
+INFO       - 2023-08-11 16:31:35,983 - client          : logging in using static token
+INFO       - 2023-08-11 16:31:37,767 - gateway         : Shard ID None has connected to Gateway (Session ID: 965bccd06f7ba29131d3ea3d956d7f36).
+INFO       - 2023-08-11 16:32:26,931 - client          : logging in using static token
+INFO       - 2023-08-11 16:32:28,633 - gateway         : Shard ID None has connected to Gateway (Session ID: 2ac326d8c795c961843df97a0f93ac80).
+INFO       - 2023-08-11 16:32:52,435 - client          : logging in using static token
+INFO       - 2023-08-11 16:32:54,074 - gateway         : Shard ID None has connected to Gateway (Session ID: 9705010947221bdab42fb4ebf9cd19fb).
+INFO       - 2023-08-11 16:33:40,113 - client          : logging in using static token
+INFO       - 2023-08-11 16:33:41,896 - gateway         : Shard ID None has connected to Gateway (Session ID: b59c365b51d86a304ccdc9990619c649).
+INFO       - 2023-08-11 16:34:48,370 - client          : logging in using static token
+INFO       - 2023-08-11 16:34:50,108 - gateway         : Shard ID None has connected to Gateway (Session ID: 4af828e404c48c8b06737c5eb17a6a75).
+INFO       - 2023-08-11 16:35:28,955 - client          : logging in using static token
+INFO       - 2023-08-11 16:35:30,749 - gateway         : Shard ID None has connected to Gateway (Session ID: d309abc6395b5cf92bfc7d4f5ded8c77).
+INFO       - 2023-08-11 16:38:49,811 - client          : logging in using static token
+INFO       - 2023-08-11 16:38:51,476 - gateway         : Shard ID None has connected to Gateway (Session ID: 2da8d2685bbdfa6fa548586a7b7c4504).
+INFO       - 2023-08-11 17:59:40,968 - gateway         : Shard ID None session has been invalidated.
+INFO       - 2023-08-11 17:59:47,192 - gateway         : Shard ID None has connected to Gateway (Session ID: 1df623ff2166bb5f1942cdec93187702).
+ERROR      - 2023-08-11 17:59:49,194 - client          : Ignoring exception in on_ready
+Traceback (most recent call last):
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\client.py", line 441, in _run_event
+    await coro(*args, **kwargs)
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\main.py", line 20, in on_ready
+    await bot.load_extension('cogs.JoinParty')
+  File "C:\Users\bijom\Documents\GitHub\ZeusRiddle\.venv\Lib\site-packages\discord\ext\commands\bot.py", line 1007, in load_extension
+    raise errors.ExtensionAlreadyLoaded(name)
+discord.ext.commands.errors.ExtensionAlreadyLoaded: Extension 'cogs.JoinParty' is already loaded.
+INFO       - 2023-08-11 18:06:26,642 - client          : logging in using static token
+INFO       - 2023-08-11 18:06:28,614 - gateway         : Shard ID None has connected to Gateway (Session ID: 422e02279f38dce6dadc396af5a24829).
+INFO       - 2023-08-11 18:07:12,982 - client          : logging in using static token
+INFO       - 2023-08-11 18:07:14,646 - gateway         : Shard ID None has connected to Gateway (Session ID: d3e626f9e71b594c254a296300af072a).
+INFO       - 2023-08-11 18:16:45,262 - client          : logging in using static token
+INFO       - 2023-08-11 18:16:46,960 - gateway         : Shard ID None has connected to Gateway (Session ID: c149fcca821a1e51ea15a770aaccbe0a).

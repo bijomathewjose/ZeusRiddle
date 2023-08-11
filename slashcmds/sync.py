@@ -1,44 +1,31 @@
 import discord
+import logging
 from discord import app_commands
-from settings import cursor,commit,logging
+from settings import cursor,commit
+from utils import SyncUtil
 logger = logging.getLogger("bot")
+
 from uuid import uuid4
 class Sync(app_commands.Group):
-    @app_commands.command(name="discord-to-db")
+    @app_commands.command(name="db-roles",description='Update user roles in database from discord')
     async def sync(self,interaction: discord.Interaction):
         try:
             guild=interaction.guild
-            self.sync_to_db(guild)
+            SyncUtil.sync_to_db(guild)
             logger.info('Discord user synced to to Database')
             await interaction.response.send_message(f"Updated users in db for {guild.name}",ephemeral=True)
         except Exception as e:
             logger.error(f'Exception - {e}',e)
-    @app_commands.command(name="db-to-discord")
+
+    @app_commands.command(name="discord-roles",description='Update user roles in discord from database')
     async def db_to_discord(self,interaction: discord.Interaction):
         try:
             guild=interaction.guild
-            sql=f"""SELECT * FROM user_role_link"""
-            cursor.execute(sql)
-            db_user_role_links=cursor.fetchall()
-            users=guild.members
-            for db_user_role in db_user_role_links:
-                user_in_discord=False
-                for user in users:
-                    if db_user_role['user_id']==str(user.id):
-                        user_in_discord=True
-                        if not any(db_user_role['role_id']==str(role.id) for role in user.roles):
-                            role=discord.utils.get(guild
-                            .roles,id=int(db_user_role['role_id']))
-                            await user.add_roles(role)
-                if not user_in_discord:
-                    sql=f"""DELETE FROM user_role_link WHERE user_id='{db_user_role['user_id']}'"""
-                    cursor.execute(sql)
-                    commit()
+            await SyncUtil.sync_to_guild(guild)
             await interaction.response.send_message(f"Updated roles in db for {guild.name}",ephemeral=True)
-            pass
         except Exception as e:
             logger.error(f'Exception - {e}',e)
-    @app_commands.command(name="roles-to-db")
+    @app_commands.command(name="roles")
     async def roles_to_db(self,interaction: discord.Interaction):
         try:
             guild=interaction.guild

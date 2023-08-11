@@ -2,7 +2,6 @@ import os
 import discord
 import mysql.connector
 from dotenv import load_dotenv
-import logging
 from logging.config import dictConfig
 
 load_dotenv()
@@ -21,6 +20,7 @@ mydb = mysql.connector.connect(
     )
 cursor = mydb.cursor(dictionary=True)
 commit = mydb.commit
+close=mydb.close
 
 LOGGING_CONFIG = {
     "version": 1,
@@ -46,7 +46,7 @@ LOGGING_CONFIG = {
             "level": "INFO",
             "class": "logging.FileHandler",
             "filename": "logs/infos.log",
-            "mode": "w",
+            "mode": "a",
             "formatter": "verbose",
         },
     },
@@ -59,5 +59,6 @@ LOGGING_CONFIG = {
         },
     },
 }
+
 
 dictConfig(LOGGING_CONFIG)
