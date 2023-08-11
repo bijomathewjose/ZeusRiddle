@@ -5,6 +5,7 @@ from settings import cursor,commit,mydb
 from settings import WELCOME_CHANNEL
 from mysql.connector import Error
 logger = logging.getLogger("bot")
+
 def check_user_in_db(member):
     try:        
         sql=f"""SELECT * FROM user where id={member.id}"""
@@ -28,6 +29,7 @@ async def add_user(member):
             logger.error('New User has no roles associated')
     except ExceptionGroup as e:
         logger.error(f'Exception - {e}')    
+
 def add_user_to_db(member:str,role:str)->None:
     try:
         cursor.execute(f"INSERT INTO user (id,name) VALUES('{member.id}','{(member.name)}')")
