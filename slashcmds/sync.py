@@ -8,26 +8,6 @@ logger = logging.getLogger("bot")
 
 from uuid import uuid4
 
-#     # @app_commands.command(name="roles-to-db",description='Update roles in database from discord')
-#     # async def roles_to_db(self,interaction: discord.Interaction):
-#     #     try:
-#     #         guild=interaction.guild
-#     #         try:
-#     #             sql=f"""SELECT * FROM role"""
-#     #             cursor.execute(sql)
-#     #             db_roles=cursor.fetchall()
-#     #             for role in guild.roles:
-#     #                 values=f"""'{role.id}','{role.name}'"""
-#     #                 sql=f"""INSERT INTO role (id,name) VALUES({values})"""
-#     #                 if not any(str(role.id) == db_role['id'] for db_role in db_roles):
-#     #                     cursor.execute(sql) 
-#     #                     commit()
-#     #         except Exception as  e:
-#     #             logger.error(f'Exception - {e}',e)
-#     #         await interaction.response.send_message(f"Updated roles in roles for {guild.name}",ephemeral=True)
-#     #     except Exception as e:
-#     #         logger.error(f'Exception - {e}',e)
-
 async def setup(bot):
     @app_commands.command(name='sync')
     async def sync(interaction: discord.Interaction,string: str):
