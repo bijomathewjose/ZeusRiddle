@@ -3,7 +3,7 @@ import logging
 import mysql
 from discord import app_commands
 from settings import cursor,commit,mydb
-from utils import SyncUtil
+
 logger = logging.getLogger("bot")
 
 from uuid import uuid4
@@ -14,6 +14,9 @@ class Sync(app_commands.Group):
             cursor.execute("SELECT * FROM user_role_link")
             db_members=[(int(member['user_id']),int(member['role_id'])) for member in cursor.fetchall()]
             queries=[(str(uuid4()),member.id,role.id) for member in interaction.guild.members for role in member.roles if not ((member.id,role.id) in db_members or role.name=='@everyone') ]
+            
+            #run sql queries
+
             if(len(queries)>0):
                 try:
                     cursor.executemany("INSERT INTO user_role_link (id, user_id, role_id) VALUES(%s, %s, %s)", queries)
@@ -41,6 +44,9 @@ class Sync(app_commands.Group):
                     queries.append((user_id,)) 
                 elif not role: 
                     await user.add_roles(discord.utils.get(guild.roles,id=role_id))
+
+            #run sql queries
+
             if(len(queries)>0):
                 try:
                     sql_statement="DELETE FROM user_role_link WHERE user_id=%s"
@@ -54,25 +60,25 @@ class Sync(app_commands.Group):
             logger.error(f'Exception - {e}',e)
 
 
-    @app_commands.command(name="roles-to-db",description='Update roles in database from discord')
-    async def roles_to_db(self,interaction: discord.Interaction):
-        try:
-            guild=interaction.guild
-            try:
-                sql=f"""SELECT * FROM role"""
-                cursor.execute(sql)
-                db_roles=cursor.fetchall()
-                for role in guild.roles:
-                    values=f"""'{role.id}','{role.name}'"""
-                    sql=f"""INSERT INTO role (id,name) VALUES({values})"""
-                    if not any(str(role.id) == db_role['id'] for db_role in db_roles):
-                        cursor.execute(sql) 
-                        commit()
-            except Exception as  e:
-                logger.error(f'Exception - {e}',e)
-            await interaction.response.send_message(f"Updated roles in roles for {guild.name}",ephemeral=True)
-        except Exception as e:
-            logger.error(f'Exception - {e}',e)
+    # @app_commands.command(name="roles-to-db",description='Update roles in database from discord')
+    # async def roles_to_db(self,interaction: discord.Interaction):
+    #     try:
+    #         guild=interaction.guild
+    #         try:
+    #             sql=f"""SELECT * FROM role"""
+    #             cursor.execute(sql)
+    #             db_roles=cursor.fetchall()
+    #             for role in guild.roles:
+    #                 values=f"""'{role.id}','{role.name}'"""
+    #                 sql=f"""INSERT INTO role (id,name) VALUES({values})"""
+    #                 if not any(str(role.id) == db_role['id'] for db_role in db_roles):
+    #                     cursor.execute(sql) 
+    #                     commit()
+    #         except Exception as  e:
+    #             logger.error(f'Exception - {e}',e)
+    #         await interaction.response.send_message(f"Updated roles in roles for {guild.name}",ephemeral=True)
+    #     except Exception as e:
+    #         logger.error(f'Exception - {e}',e)
 
 async def setup(bot):
     bot.tree.add_command(Sync(name='sync'))
