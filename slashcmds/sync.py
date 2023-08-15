@@ -18,11 +18,11 @@ async def setup(bot):
             discord_members=[(member.id,role.id) for member in guild.members for role in member.roles if not role.name=='@everyone']
             insert_queries,delete_queries=None,None
 
-            if string == 'discord to db':
+            if string == 'discord-to-db':
                 insert_queries=[(str(uuid4()),member[0],member[1])for member in discord_members if not member in db_members]
                 delete_queries=[(member[0],member[1]) for member in db_members if not member in discord_members]
                 
-            elif string == 'db to discord':
+            elif string == 'db-to-discord':
                 for db_user_role in db_members:
                     user_id,role_id=db_user_role
                     user = discord.utils.get(guild.members, id=user_id)
@@ -31,7 +31,7 @@ async def setup(bot):
                         user.add_roles(role)                        
                     elif user and role==None:
                         user.remove_roles(role)
-
+            
             if insert_queries or delete_queries:        
                 try:
                     if insert_queries:
@@ -46,11 +46,15 @@ async def setup(bot):
 
             logger.info('Discord user synced to to Database')
 
-            if string == 'discord to db':
+            if string == 'discord-to-db':
                 await interaction.response.send_message(f"Synced discord to database for {guild.name}",ephemeral=True)
-            elif string == 'db to discord':
+            elif string == 'db-to-discord':
                 await interaction.response.send_message(f"Synced database to discord for {guild.name}",ephemeral=True)
-
+            else:
+                embed=discord.Embed(title=f"sync commands ",description=f"Synced commands",color=0x00ff00)
+                embed.add_field(name='command 1',value='discord-to-db',inline=False)
+                embed.add_field(name='command 2',value='db-to-discord',inline=False)
+                await interaction.response.send_message(f"Invalid Command,Check the list below",embeds=[embed])
         except Exception as e:
             logger.error(f'Exception - {e}',e)
     bot.tree.add_command(sync)
