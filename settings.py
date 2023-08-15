@@ -21,6 +21,7 @@ mydb = mysql.connector.connect(
 cursor = mydb.cursor(dictionary=True)
 commit = mydb.commit
 close=mydb.close
+rollback=mydb.rollback
 
 LOGGING_CONFIG = {
     "version": 1,

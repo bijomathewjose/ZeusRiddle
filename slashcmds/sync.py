@@ -2,7 +2,7 @@ import discord
 import logging
 import mysql
 from discord import app_commands
-from settings import cursor,commit,mydb
+from settings import cursor,commit,rollback
 
 logger = logging.getLogger("bot")
 
@@ -15,32 +15,42 @@ async def setup(bot):
             guild=interaction.guild
             cursor.execute("SELECT * FROM user_role_link")
             db_members=[(int(member['user_id']),int(member['role_id'])) for member in cursor.fetchall()]
-            queries=[]
-            sql_statement=None
+            discord_members=[(member.id,role.id) for member in guild.members for role in member.roles if not role.name=='@everyone']
+            insert_queries,delete_queries=None,None
 
-            if string == 'from-discord-to-db':
-                queries=[(str(uuid4()),member.id,role.id) for member in guild.members for role in member.roles if not ((member.id,role.id) in db_members or role.name=='@everyone') ]
-                sql_statement="INSERT INTO user_role_link (id, user_id, role_id) VALUES(%s, %s, %s)"
-
-            elif string == 'from-db-to-discord':
-
+            if string == 'discord to db':
+                insert_queries=[(str(uuid4()),member[0],member[1])for member in discord_members if not member in db_members]
+                delete_queries=[(member[0],member[1]) for member in db_members if not member in discord_members]
+                
+            elif string == 'db to discord':
                 for db_user_role in db_members:
                     user_id,role_id=db_user_role
                     user = discord.utils.get(guild.members, id=user_id)
                     role = discord.utils.get(user.roles,id=role_id) if user else None
-                    if not user or not role:
-                        queries.append(db_user_role) 
-                sql_statement="DELETE FROM user_role_link WHERE user_id=%s AND role_id=%s"
+                    if user and role:
+                        user.add_roles(role)                        
+                    elif user and role==None:
+                        user.remove_roles(role)
 
-            if(len(queries)>0):
+            if insert_queries or delete_queries:        
                 try:
-                    cursor.executemany(sql_statement, queries)
-                    commit()
+                    if insert_queries:
+                        cursor.executemany("INSERT INTO user_role_link (id, user_id, role_id) VALUES(%s, %s, %s)", insert_queries)
+                    if delete_queries:
+                        cursor.executemany("DELETE FROM user_role_link WHERE user_id=%s AND role_id=%s", delete_queries)
+                    
+                        commit()
                 except mysql.connector.Error as e:
-                    mydb.rollback()
+                    rollback()
                     logger.error(f'Database Error : {e}')
+
             logger.info('Discord user synced to to Database')
-            await interaction.response.send_message(f"Updated users in db for {guild.name}",ephemeral=True)
+
+            if string == 'discord to db':
+                await interaction.response.send_message(f"Synced discord to database for {guild.name}",ephemeral=True)
+            elif string == 'db to discord':
+                await interaction.response.send_message(f"Synced database to discord for {guild.name}",ephemeral=True)
+
         except Exception as e:
             logger.error(f'Exception - {e}',e)
     bot.tree.add_command(sync)
